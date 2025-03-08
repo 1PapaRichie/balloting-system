@@ -6,30 +6,34 @@
     <title>Number Spinner</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 flex justify-center items-center min-h-screen">
-    <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-lg text-center">
-        <h2 class="text-2xl font-bold text-gray-800">Spin Once And Get your Ballot Number</h2>
+<body class="bg-gradient-to-r from-blue-400 to-purple-600 flex justify-center items-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-2xl w-full max-w-lg text-center border border-gray-200 
+                transition-all duration-300 hover:shadow-blue-500/50">
+        <h2 class="text-3xl font-bold text-gray-800 drop-shadow-md">🎲 Spin Once And Get Your Ballot Number 🎲</h2>
         
         <!-- Input Section -->
-        <div class="mt-4">
-            <label class="block text-gray-600">Enter Your Name:</label>
-            <input type="text" id="userName" class="w-full p-2 border rounded focus:ring focus:ring-blue-300">
+        <div class="mt-6">
+            <label class="block text-gray-600 font-semibold">Enter Your Name:</label>
+            <input type="text" id="userName" 
+                   class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400 text-lg shadow-sm">
         </div>
 
         <!-- Spin Button -->
         <div class="mt-6">
-            <button id="spinButton" onclick="spinNumber()" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
-                Spin
+            <button id="spinButton" onclick="spinNumber()" 
+                    class="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-3 rounded-lg 
+                           hover:from-blue-600 hover:to-purple-600 transition-all duration-300 font-semibold shadow-md">
+                🎰 Spin
             </button>
         </div>
 
         <!-- Number Display -->
-        <div id="numberDisplay" class="mt-6 text-3xl font-bold text-blue-600 hidden">
+        <div id="numberDisplay" class="mt-6 text-4xl font-bold text-blue-600 hidden">
             🎲 <span id="randomNumber"></span> 🎲
         </div>
 
         <!-- Error Message -->
-        <p id="errorMessage" class="text-red-500 mt-4 hidden">Sorry, you cannot spin twice.</p>
+        <p id="errorMessage" class="text-red-500 mt-4 hidden font-semibold">⚠️ Sorry, you cannot spin twice.</p>
     </div>
 
     <script>
